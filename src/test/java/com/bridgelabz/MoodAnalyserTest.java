@@ -28,4 +28,10 @@ public void givenMessage_WhenSad_ShouldReturnSad() {
         String mood = moodAnalyzer.analyzeMood();
         Assertions.assertEquals("Happy", mood);
     }
+    @Test
+    public void givenNullMood_ShouldReturnHappy() {
+        MoodAnalyser moodAnalyser = new MoodAnalyser(null);
+        String mood = moodAnalyser.analyzeMood();
+        Assertions.assertEquals("Happy", mood);
+    }
 }
